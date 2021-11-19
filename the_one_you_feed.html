@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <style>
+      body {
+        background-color: #ffffbf;
+        font-family:Monaco,monospace;
+}
+
+h1 {
+  text-align: center;
+}
+
+button {
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+}
+    </style>
+    <script>
+	function hateFed() {
+	var hateBear = document.getElementById("hateBear");
+	var currentWidth = hateBear.width;
+  
+  var newWidth = currentWidth + 20;
+  hateBear.width = newWidth;
+  
+  if (newWidth == 400) {
+  	alert("Oh no! Hate wins!");
+    
+    hateBear.width = 200;
+    document.getElementById("loveBear").width = 200;
+  }
+}
+
+function loveFed() {
+	var loveBear = document.getElementById("loveBear");
+	var currentWidth = loveBear.width;
+    
+  var newWidth = currentWidth + 20;
+  loveBear.width = newWidth;
+  
+  if (newWidth == 400) {
+  	alert("Yay! Love wins!");
+    loveBear.width = 200;
+    document.getElementById("hateBear").width = 200;
+  }
+}
+    </script>
+  </head>
+  <body>
+    <h1>
+      The One You Feed
+    </h1>
+
+    <table style="width:100%">
+      <tr style="width:100%">
+        <td style="width:50%; text-align:center;">
+          <button onclick="hateFed()">
+            Feed Hate
+          </button>
+        </td>
+        <td style="width:50%; text-align:center">
+          <button onclick="loveFed()">
+            Feed Love
+          </button>
+        </td>
+      </tr>
+      <tr style="width:100%">
+        <td style="width:50%; text-align:center">
+          <img id="hateBear" src="https://github.com/kipp-arts-and-letters-girls-who-code/kipp-arts-and-letters-girls-who-code.github.io/blob/main/hate_bear.png?raw=true" width="200"/>
+        </td>
+        <td style="width:50%; text-align:center">
+          <img id="loveBear" src="https://github.com/kipp-arts-and-letters-girls-who-code/kipp-arts-and-letters-girls-who-code.github.io/blob/main/love_bear.png?raw=true" width="200"/>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
